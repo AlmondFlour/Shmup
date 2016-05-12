@@ -26,7 +26,7 @@ class Wave:
 	def update(self):
 		self.currentWait += 1
 		self.waveSoundDelay += 1
-		if( self.subWaves <= 0 and currentWave != len(waveList
+		if( self.subWaves <= 0 and config.currentWave != len(waveList
 		)):
 			config.currentWave +=1
 			bullet.clearBullets()
@@ -209,13 +209,13 @@ def waveInit():
 	#================
 	w = Wave()
 	config.waveInfo.append(w)
-	w.subWaves = 10
+	w.subWaves = 8
 	def wave4() :
 		w = config.waveInfo[3]
 		w.update()
 	
 		#enemy spawner
-		if( w.currentWait >= w.spawnDelay and len(config.enemies) <= 20 ):
+		if( w.currentWait >= w.spawnDelay and len(config.enemies) <= 15 ):
 			w.currentWait = 0
 			#small bullets
 			for n in range(15):
