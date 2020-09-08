@@ -63,7 +63,7 @@ def play_sound(path):
   global _sound_library
   sound = _sound_library.get(path)
   if sound == None:
-    canonicalized_path = ('Sounds\\' + path).replace('/', os.sep).replace('\\', os.sep)
+    canonicalized_path = ('Sounds/' + path)
     sound = pygame.mixer.Sound(canonicalized_path)
     _sound_library[path] = sound
   sound.play()

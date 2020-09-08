@@ -77,7 +77,7 @@ class Player :
 		if( self.iFrames <= 0 ):
 			self.iFrames = self.iFramesStart
 			self.hitCount += 1
-			print "Player has been hit", self.hitCount, "times!"
+			print( "Player has been hit", self.hitCount, "times!")
 			config.clearBulletsFlag = True
 			config.play_sound('Game Overold.wav')
 			self.pos = config.PLAYER_START_POS

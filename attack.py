@@ -46,7 +46,7 @@ class Attack:
 		b = bullet.Bullet( self.window, self.image, pos, dest )
 		b.vel = self.vel
 		config.bullets.append(b)
-		config.play_sound('attack.wav')
+		config.play_sound('Attack.wav')
 		if( self.magicBullets):
 			b.addToList(config.magicBullets)
 		

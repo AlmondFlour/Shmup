@@ -31,14 +31,14 @@ unscaledArea = pygame.Surface((config.TOTAL_WIDTH, config.TOTAL_HEIGHT))
 
 
 info = pygame.display.Info()
-print info
+print( info )
 
 #===Initilize Sound
 
 SONG_END = pygame.USEREVENT + 1
 pygame.mixer.music.set_endevent(SONG_END)
-pygame.mixer.music.load('Sounds\\th06_02.ogg')
-#pygame.mixer.music.load('Sounds\\th06_14.wav')
+pygame.mixer.music.load('Sounds/th06_02.ogg')
+#pygame.mixer.music.load('Sounds/th06_14.wav')
 pygame.mixer.music.play()
 musicChange = True
 
@@ -155,7 +155,7 @@ while not done:
 		done = True
 	
 	if( config.currentWave >= 2 and musicChange):
-		pygame.mixer.music.load('Sounds\\th06_09.ogg')
+		pygame.mixer.music.load('Sounds/th06_09.ogg')
 		musicChange = False
 		pygame.mixer.music.play()
 		
